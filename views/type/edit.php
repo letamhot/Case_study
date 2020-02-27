@@ -1,10 +1,12 @@
 <?php
 include '../../connect.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <div class="col-12 col-md-12">
     <div class="row">
         <div class="col-12">
-            <h1>Update Shoes</h1>
+            <h1>Update Type</h1>
         </div>
         <div class="col-12">
             <form method="post" enctype="multipart/form-data">
@@ -24,3 +26,7 @@ include '../../connect.php';
                 </div>
 
             </form>
+        </div>
+    </div>
+</div>
+</html>

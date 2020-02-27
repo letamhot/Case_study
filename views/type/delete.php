@@ -1,4 +1,4 @@
-<h1>Bạn chắc chắn muỗn xóa sản phẩm này?</h1>
+<h1>Bạn chắc chắn muỗn xóa  không?</h1>
 
 <h3><?php echo $type->name_type; ?></h3>
 

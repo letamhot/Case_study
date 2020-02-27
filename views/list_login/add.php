@@ -6,7 +6,7 @@ if(isset($message)){
 <div class="col-12 col-md-12">
     <div class="row">
         <div class="col-12">
-            <h1>Thêm mới tài khoản</h1>
+            <h1>Add Users</h1>
             <a href="../product/index.php"><i class="fa fa-address-book
 " aria-hidden="true"></i> List Shoes</a>
         </div>

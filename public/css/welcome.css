@@ -1,11 +1,18 @@
 body{
 font: 14px sans-serif; text-align: center;
-/* background-image: url("../image/asics.png");
+  background-image: 7px 7px 7px rgba(247, 9, 9, 0.637);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    ; */
 }
+table tr td {
+font-size: 1.2em;
+font-weight: bold;
+}
+table tr th {
+  font-size: 1.2em;
+  font-weight: bold;
+  }
 .page-header{
     background-color: #66FFFF;
   }
@@ -15,15 +22,25 @@ font: 14px sans-serif; text-align: center;
   }
   
   h6 {
-    color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    color: black;
+    text-shadow: 1px 1px 2px white, 0 0 25px blue, 0 0 5px darkblue;
   }
-  
+  p {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .desc{
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
   h3 {
     text-shadow: 1px 1px 2px white, 0 0 6px blue, 0 0 6px yellow;
   }
   
   h2 {
+    text-align: center;
     text-shadow: 1px 1px 2px yellow, 0 0 6px red, 0 0 6px powderblue;
   }
   h4 {
@@ -88,4 +105,68 @@ font: 14px sans-serif; text-align: center;
   
   .box-shadow {
       box-shadow: 7px 7px 7px rgba(0,0,0,0.5);
+  }
+  video {
+    max-width: 100%;
+    max-height: auto;
+  }
+  .carousel-inner img {
+    width: 100%;
+    height: 700px;
+  }
+  #header {
+    height: auto;
+    background-image: linear-gradient(rgb(85, 253, 253),rgb(255, 255, 255));   
+  }
+  #video{
+    width: 100%;
+    height: 500px;
+    background-image: url(../video/giphy\ \(1\).gif);
+  }
+  .form-control {
+    height: 30px;
+    color: violet;
+  }
+  @media (max-width: 457px) {
+    .images-shoes div.thumbnail {
+      width: calc(100% / 3);
+    }
+  }
+  @media (max-width: 800px) {
+    .images-shoes div.thumbnail {
+      width: calc(100% / 5);
+    }
+  }
+  #footer {
+    color: black;
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(85, 253, 253) ); 
+    border-top: 3px solid black;
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  div.thumbnail {
+    /*margin: 5px;*/
+    border: 1px solid #ccc;
+    float: left;
+    width: calc(100% / 4);
+  }
+  
+  div.thumbnail:hover {
+    border: 1px solid #777;
+  }
+  
+  div.thumbnail img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  #container{
+    min-height: 1000px;
   }

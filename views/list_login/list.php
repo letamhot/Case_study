@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang quản trị</title>
+    <title>ADMIN</title>
 
     <h2 style="margin: 20px;text-align: center;">Account List</h2>
-    <div class="container">
+    <div class="container" id="container">
         <div class="md-form mt-0">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="tableSearch" style="width: 25%; float: right; margin: 15px;">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="tableSearch"
+                style="width: 25%; float: right; margin: 15px;">
         </div>
         <br>
         <table class="table table-bordered table-striped">
@@ -19,7 +20,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Password</th>
-                    <th></th>
+                    <th colspan="1" >Action</th>
                 </tr>
             </thead>
             <tbody id="myTable">
@@ -36,6 +37,6 @@
             </tbody>
         </table>
     </div>
-    </body>
+</head>
 
 </html>

@@ -1,4 +1,4 @@
-<h1>Bạn chắc chắn muốn lấy lại sản phẩm này?</h1>
+<h1>Bạn chắc chắn muốn lấy lại không?</h1>
 
 <form action="./producer_type.view.php?page=backuppro_typefile" method="post">
     <input type="hidden" name="id1" value="<?php echo $protype->id1; ?>"/>

@@ -1,6 +1,8 @@
 <?php
 include '../../connect.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <div class="col-12 col-md-12">
     <div class="row">
         <div class="col-12">
@@ -36,3 +38,7 @@ include '../../connect.php';
                 </div>
 
             </form>
+        </div>
+    </div>
+</div>
+</html>

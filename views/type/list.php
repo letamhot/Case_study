@@ -7,12 +7,13 @@
     <title>Trang quản trị</title>
 
     <h2 style="margin: 20px;text-align: center;">List Type</h2>
-    <div class="container">
+  
         <div class="md-form mt-0">
             <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="tableSearch"
                 style="width: 25%; float: right; margin: 15px;">
         </div>
-        <br>
+        <br>  
+        <div class="container" id="container">
         <a href="type.view.php?page=add" class="btn btn-success btn-sm" style="float:left">ADD</a>
         <a href="type.view.php?page=show_backup" class="btn btn-warning btn-sm" style="float:right">Backup File</a>
         <br>
@@ -22,8 +23,7 @@
                     <th>STT</th>
                     <th>Name_Type</th>
                     <th>Image</th>
-                    <th></th>
-                    <th></th>
+                    <th  colspan="2" style="text-align : center">Action</th>
                 </tr>
             </thead>
             <br>
@@ -42,6 +42,7 @@
             </tbody>
         </table>
         </body>
-
+    </div>
+</head>
 
 </html>

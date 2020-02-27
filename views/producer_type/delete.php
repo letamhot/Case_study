@@ -1,4 +1,4 @@
-<h1>Bạn chắc chắn muỗn xóa  không?</h1>
+<h1>Bạn chắc chắn muốn xóa  không?</h1>
 
 <h3><?php echo $protype->id1; ?></h3>
 <h3><?php echo $protype->id2; ?></h3>

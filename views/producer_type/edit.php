@@ -1,6 +1,8 @@
 <?php
 include '../../connect.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <div class="col-12 col-md-12">
     <div class="row">
         <div class="col-12">
@@ -8,12 +10,12 @@ include '../../connect.php';
         </div>
         <div class="col-12">
             <form method="post" enctype="multipart/form-data">
-            <input type="hidden" name="id1" value="<?php echo $protype->id_producer; ?>" />
+                <input type="hidden" name="id1" value="<?php echo $protype->id_producer; ?>" />
                 <input type="hidden" name="id2" value="<?php echo $protype->id_type; ?>" />
                 <div class="form-group">
                     <label>Name</label>
                 </div>
-                
+
                 <div class="form-group">
                     <label>Producer</label>
                     <select class="form-control" name="id_producer">
@@ -61,3 +63,8 @@ include '../../connect.php';
                 </div>
 
             </form>
+        </div>
+    </div>
+</div>
+
+</html>

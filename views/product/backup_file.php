@@ -1,4 +1,4 @@
-<h1>Bạn chắc chắn muốn lấy lại sản phẩm này?</h1>
+<h1>Bạn chắc chắn muốn lấy lại  không?</h1>
 
 <h3><?php echo $pro->name; ?></h3>
 

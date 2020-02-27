@@ -1,9 +1,10 @@
 <?php
 include '../../connect.php';
 ?>
-<div class="col-12 col-md-12">
-    <div class="row">
-        <div class="col-12">
+<div class="container center" >
+    <div class="col-8 col-md-8">
+        <div class="row">
+            <div class="col-8">
             <h1>ADD Shoes</h1>
         </div>
         <div class="col-12">
@@ -45,6 +46,7 @@ include '../../connect.php';
             </form>
         </div>
     </div>
+</div>
 </div>
 <?php
 

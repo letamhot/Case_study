@@ -1,4 +1,4 @@
-<h1>Bạn chắc chắn muỗn xóa khách hàng này?</h1>
+<h1>Delete Users?</h1>
 
 <h3><?php echo $login->Name; ?></h3>
 

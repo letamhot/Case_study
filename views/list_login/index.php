@@ -39,8 +39,7 @@ use \Controllers\LoginController;
     }
     ?>
     </div>
-
-
+    <br>
 </body>
 <?php include "../partials/footer.php" ;?>
 <script src="../../public/js/search.js"></script>

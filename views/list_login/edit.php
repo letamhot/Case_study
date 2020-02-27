@@ -1,4 +1,4 @@
-<h2>Cập nhật thông tin khách hàng</h2>
+<h2>Update Users</h2>
 <form method="post" action="./index.php?page=edit">
     <input type="hidden" name="id" value="<?php echo $login->id; ?>"/>
     <div class="form-group">

@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang quản trị</title>
+    <title>ADMIN</title>
 </head>
 
 <body>
-    <h2>Danh sách khách hàng</h2>
+    <h2>List Product_Type</h2>
+    <div class="container" id="container">
     <a href="producer_type.view.php?page=add" class="btn btn-success btn-sm" style="float:right">ADD</a>
     <table class="table">
         <thead>
@@ -36,6 +37,7 @@
                 <?php endforeach; ?>
         </tbody>
     </table>
+    </div>
 </body>
 
 </html>

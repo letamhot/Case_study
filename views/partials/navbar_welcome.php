@@ -3,6 +3,8 @@
             <i class="fa fa-bars menu"></i>
         </div>
         <ul>
+        <img src="../../public/video/giphy.gif" style="width:80px; float:right">
+        <!-- <br> -->
         <li><a href="welcome.php"><i class="fa fa-user-circle-o
 " aria-hidden="true"></i>Home</a></li>
         <li><a href="./views/list_login/index.php"><i class="fa fa-address-book
