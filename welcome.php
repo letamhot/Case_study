@@ -4,9 +4,6 @@ echo accessIndex();
 <?php
 include "connect.php";
 ?>
-<?php
-
-?>
 
 
 <!DOCTYPE html>
@@ -21,7 +18,6 @@ include "connect.php";
 
 <body>
     <?php include './views/partials/navbar_welcome.php';?>
-    <!-- <h4 style="text-align: center;">Giới Thiệu Về Công Nghệ Gel Trong Giày Asics:</h4> -->
     <nav class="navbar navbar-expand-sm bg-light justify-content-center" id="video">
 
     </nav>
@@ -39,7 +35,8 @@ include "connect.php";
             <hr class="clearfix w-100 d-md-none">
             <div class="thumbnail">
                 <!-- <a target="_blank" href="<?= 'data:image;base64,'.base64_encode($row['image']);?>"> -->
-                    <img class="img-thumbnail" src="<?= 'data:image;base64,'.base64_encode($row['image']);?>"  width="600" height="400">
+                <img class="img-thumbnail" src="<?= 'data:image;base64,'.base64_encode($row['image']);?>" width="600"
+                    height="400">
                 </a>
                 <div class="desc"><?php echo $row['name']; ?><p><?php echo $row['price_input']; ?> VND</p>
                 </div>
@@ -50,7 +47,7 @@ include "connect.php";
     </div>
     <br>
 
-    <?php include "./views/partials/footer.php" ;?>
 </body>
+<?php include "./views/partials/footer.php" ;?>
 
 </html>
