@@ -47,6 +47,10 @@ include '../../connect.php';
                             value="<?= 'data:image;base64,'.base64_encode($pro->image)?>">
                     </div>
                     <div class="form-group">
+                        <label>Price_input</label>
+                        <input type="number" class="form-control" name="price_input" placeholder="Số tiền" required>
+                    </div>
+                    <div class="form-group">
                         <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-info" />
                         <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Hủy</button>
                     </div>

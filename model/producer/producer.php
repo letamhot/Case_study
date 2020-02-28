@@ -13,6 +13,7 @@ class Producer
 
 
 
+
     public function __construct($name_producer, $address, $phone, $tax_code, $image)
     {
         // $this->id = $id;
@@ -21,6 +22,7 @@ class Producer
         $this->phone = $phone;
         $this->tax_code = $tax_code;
         $this->image = $image;
+
 
     }
 }

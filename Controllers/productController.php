@@ -28,7 +28,8 @@ class ProductController
             $producer = $_POST['producer'];
             $amount = $_POST['amount'];
             $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
-            $pro = new product($name, $type_product, $producer, $amount, $image);
+            $price_input = $_POST['price_input'];
+            $pro = new product($name, $type_product, $producer, $amount, $image, $price_input);
             $this->proDB->create($pro);
             $message = 'Shoes created';
             include 'add.php';
@@ -42,7 +43,7 @@ class ProductController
             include 'edit.php';
         } else {
             $id = $_POST['id'];
-            $pro = new Product( $_POST['name'], $_POST['type'], $_POST['producer'], $_POST['amount'], addslashes(file_get_contents($_FILES['image']['tmp_name'])));
+            $pro = new Product( $_POST['name'], $_POST['type'], $_POST['producer'], $_POST['amount'], addslashes(file_get_contents($_FILES['image']['tmp_name'])), $_POST['price_input']);
             $this->proDB->update($id, $pro);
             header('Location: index.php');
         }

@@ -26,6 +26,7 @@
                     <th>Producer</th>
                     <th>Amount</th>
                     <th>Image</th>
+                    <th>Price_input</th>
                     <th  colspan="2" style="text-align : center">Action</th>
                 </tr>
             </thead>
@@ -40,7 +41,7 @@
                     <td><?php echo $pro->amount ?></td>
                     <td><img src="<?= 'data:image;base64,'.base64_encode($pro->image)?> " width="60px" height="60px">
                     </td>
-                    </td>
+                    <td><?php echo $pro->price_input ?></td>
                     <td> <a href="index.php?page=edit&id=<?php echo $pro->id; ?>" class="btn btn-info btn-sm">Update</a>
                     </td>
                     <td> <a href="index.php?page=delete&id=<?php echo $pro->id; ?>"

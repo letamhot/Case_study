@@ -8,6 +8,7 @@ include "connect.php";
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,68 +26,26 @@ include "connect.php";
 
     </nav>
     </br>
-    <h4 style="text-align: center;">List Product:</h4>
+    <h1 style="text-align: center;">List Product:</h1>
+    <?php
+		require_once('./Model/config.php');
+		$result = $pdo->prepare("SELECT * FROM product ORDER BY id ASC");
+		$result->execute();
+		for($i=0; $row = $result->fetch(); $i++){
+	?>
+
     <div class="container">
         <div class="row images-shoes" style="background-color: white">
             <hr class="clearfix w-100 d-md-none">
             <div class="thumbnail">
-                <a target="_blank" href="./public/image/asics.png">
-                    <img class="img-thumbnail" src="./public/image/asics.png" alt="Cinque Terre" style=" height:250px">
+                <!-- <a target="_blank" href="<?= 'data:image;base64,'.base64_encode($row['image']);?>"> -->
+                    <img class="img-thumbnail" src="<?= 'data:image;base64,'.base64_encode($row['image']);?>"  width="600" height="400">
                 </a>
-                <div class="desc">Asics Gel Swift MT<p>Giá: 2.500.000 VNĐ</p>
+                <div class="desc"><?php echo $row['name']; ?><p><?php echo $row['price_input']; ?> VND</p>
                 </div>
             </div>
-            <div class="thumbnail">
-                <a target="_blank" href="./public/image/as1.jpg">
-                    <img class="img-thumbnail" src="./public/image/as1.jpg" alt="Forest" style=" height:250px">
-                </a>
-                <div class="desc">Asics Gel Nova MT<p>Giá: 2.400.000 VNĐ</p>
-                </div>
-            </div>
-            <div class="thumbnail">
-                <a target="_blank" href="./public/image/as3.jpg">
-                    <img class="img-thumbnail" src="./public/image/as3.jpg" alt="Mountains" style=" height:250px">
-                </a>
-                <div class="desc">Asics Gel Netburner FF<p>Giá: 2.800.000 VNÐ</p>
-                </div>
-            </div>
-            <div class="thumbnail">
-                <a target="_blank" href="./public/image/as4.jpg">
-                    <img class="img-thumbnail" src="./public/image/as4.jpg" alt="Cinque Terre" style=" height:250px">
-                </a>
-                <div class="desc">Asics Swift FF<p>Giá: 2.500.000 VNĐ</p>
-                </div>
-            </div>
-            <div class="thumbnail">
-                <a target="_blank" href="./public/image/asics4.jpg"><img class="img-thumbnail"
-                        src="./public/image/asics4.jpg" alt="Cinque Terre" style=" height:250px"></a>
-                <div class="desc">Asics Gel Netburner Ballistic FF MT<p>Giá: 2.300.000 VNĐ</p>
-                </div>
-            </div>
-            <div class="thumbnail">
-                <a target="_blank" href="./public/image/bra.jpg"><img class="img-thumbnail" src="./public/image/bra.jpg"
-                        alt="Cinque Terre" style=" height:250px"></a>
-                <div class="desc">
-                    <p>Giá: 2.200.000 VNĐ</p>
-                </div>
 
-            </div>
-            <div class="thumbnail">
-                <a target="_blank" href="./public/image/bdn.jpg"><img class="img-thumbnail" src="./public/image/bdn.jpg"
-                        alt="Cinque Terre" style=" height:250px"></a>
-                <div class="desc">
-                    <p>Giá: 2.300.000 VNĐ</p>
-                </div>
-
-            </div>
-            <div class="thumbnail">
-                <a target="_blank" href="./public/image/cbm.jpg"><img class="img-thumbnail" src="./public/image/cbm.jpg"
-                        alt="Cinque Terre" style=" height:250px"></a>
-                <div class="desc">
-                    <p>Giá: 2.300.000 VNĐ</p>
-                </div>
-
-            </div>
+            <?php } ?>
         </div>
     </div>
     <br>

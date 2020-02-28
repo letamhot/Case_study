@@ -14,14 +14,14 @@ class ProductDB
 
     public function create($pro)
     {
-        $sql = "INSERT INTO product(name, type_product, producer, amount, image) VALUES ('$pro->name', '$pro->type_product', '$pro->producer', '$pro->amount', '$pro->image')";
+        $sql = "INSERT INTO product(name, type_product, producer, amount, image, price_input) VALUES ('$pro->name', '$pro->type_product', '$pro->producer', '$pro->amount', '$pro->image', '$pro->price_input')";
         $statement = $this->connection->prepare($sql);
         return $statement->execute();
     }
 
     public function getAll()
     {
-        $sql = "SELECT product.id,product.name, type_product.name_type as name_type, producer.name_producer AS producer, product.amount, product.image
+        $sql = "SELECT product.id,product.name, type_product.name_type as name_type, producer.name_producer AS producer, product.amount, product.image, product.price_input
         FROM product 
         JOIN producer ON producer.id = product.producer
         JOIN type_product ON type_product.id =product.type_product
@@ -32,7 +32,7 @@ class ProductDB
         $result = $statement->fetchAll();
         $pros = [];
         foreach ($result as $row) {
-            $pro = new Product($row['name'], $row['name_type'], $row['producer'], $row['amount'], $row['image']);
+            $pro = new Product($row['name'], $row['name_type'], $row['producer'], $row['amount'], $row['image'], $row['price_input']);
             $pro->id = $row['id'];
             $pros[] = $pro;
         }
@@ -45,7 +45,7 @@ class ProductDB
         $statement->bindParam(1, $id);
         $statement->execute();
         $row = $statement->fetch();
-        $pro = new Product($row['name'], $row['type_product'], $row['producer'], $row['amount'], $row['image']);
+        $pro = new Product($row['name'], $row['type_product'], $row['producer'], $row['amount'], $row['image'], $row['price_input']);
         $pro->id = $row['id'];
         return $pro;
     }
@@ -65,12 +65,12 @@ class ProductDB
     {
         if ($pro->image !== '') {
             $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
-            $sql = "UPDATE product SET name = '$pro->name', type_product = '$pro->type_product', producer = '$pro->producer', amount = '$pro->amount', image = '$image' WHERE id = ?";
+            $sql = "UPDATE product SET name = '$pro->name', type_product = '$pro->type_product', producer = '$pro->producer', amount = '$pro->amount', image = '$image', price_input = '$pro->price_input' WHERE id = ?";
             $statement = $this->connection->prepare($sql);
             $statement->bindParam(1, $id);
             return $statement->execute();
         } else{
-            $sql = "UPDATE product SET name = '$pro->name', type_product = '$pro->type_product', producer = '$pro->producer', amount = '$pro->amount' WHERE id = ?";
+            $sql = "UPDATE product SET name = '$pro->name', type_product = '$pro->type_product', producer = '$pro->producer', amount = '$pro->amount', price_input = '$pro->price_input' WHERE id = ?";
             $statement = $this->connection->prepare($sql);
             $statement->bindParam(1, $id);
             return $statement->execute();
@@ -97,7 +97,7 @@ class ProductDB
         $result = $statement->fetchAll();
         $pros = [];
         foreach ($result as $row) {
-            $pro = new Product($row['name'], $row['name_type'], $row['producer'], $row['amount'], $row['image']);
+            $pro = new Product($row['name'], $row['type_product'], $row['producer'], $row['amount'], $row['image'], $row['price_input']);
             $pro->id = $row['id'];
             $pros[] = $pro;
         }

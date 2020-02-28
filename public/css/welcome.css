@@ -148,18 +148,27 @@ table tr th {
     text-align: center;
   }
   div.thumbnail {
-    /*margin: 5px;*/
-    border: 1px solid #ccc;
-    float: left;
-    width: calc(100% / 4);
+    margin: 5px;
+    /* border: 1px solid #ccc; */
+    float: center;
+    width: 100%;
   }
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+}
   
   div.thumbnail:hover {
     border: 1px solid #777;
   }
   
   div.thumbnail img {
-    width: 100%;
+    width: 50%;
     height: auto;
   }
   

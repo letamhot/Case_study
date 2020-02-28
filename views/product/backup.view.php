@@ -20,6 +20,7 @@
                     <th>Producer</th>
                     <th>Amount</th>
                     <th>Image</th>
+                    <th>Price_input</th>
                     <th></th>
                 </tr>
             </thead>
@@ -33,6 +34,7 @@
                     <td><?php echo $pro->amount ?></td>
                     <td><img src="<?= 'data:image;base64,'.base64_encode($pro->image)?> " width="60px" height="60px"
                             alt="<?= $pro->name ?>" class="img-thumnail"></td>
+                    <td><?php echo $pro->price_input ?></td>
                     <td> <a href="index.php?page=backupfile&id=<?php echo $pro->id; ?>"
                             class="btn btn-warning btn-sm">Backup File</a></td>
                     <?php endforeach; ?>
