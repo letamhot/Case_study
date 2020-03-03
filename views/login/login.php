@@ -1,3 +1,4 @@
+
 <?php
 // Initialize the session
 session_start();
@@ -9,7 +10,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 }
 
 // Include config file
-require_once "../../model/config.php";
+// require_once "../../model/config.php";
 
 // Define variables and initialize with empty values
 require_once "../../Controllers/login.php";

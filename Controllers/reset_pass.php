@@ -1,4 +1,6 @@
 <?php
+$connect = new PDO("mysql:host=localhost;dbname=c12;charset=utf8", "root", "");
+
 $new_password = $confirm_password = "";
 $new_password_err = $confirm_password_err = "";
  

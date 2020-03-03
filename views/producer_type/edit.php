@@ -1,6 +1,8 @@
 <?php
-include '../../connect.php';
-?>
+use Model\LoginConnection; ?>
+<?php
+    $connect = new LoginConnection();
+    $connect = $connect->connect(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <div class="container center">
@@ -22,7 +24,7 @@ include '../../connect.php';
                         <select class="form-control" name="id_producer">
                             <?php
                 $sql = "SELECT * FROM producer";
-                $result = $pdo->query($sql);
+                $result = $connect->query($sql);
                 foreach ($result as $row) {
                     if($row['id'] === $protype->id_producer){
                         echo "<option value=" . $row['id'] . " selected>" . $row['id'] . " - " . $row['name_producer'] . "</option>";
@@ -41,7 +43,7 @@ include '../../connect.php';
                         <select class="form-control" name="id_type">
                             <?php
                         $sql = "SELECT * FROM type_product";
-                        $result = $pdo->query($sql);
+                        $result = $connect->query($sql);
                         foreach ($result as $row) {
                             if($row['id'] === $protype->id_type )
                             {

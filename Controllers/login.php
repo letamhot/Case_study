@@ -1,4 +1,5 @@
 <?php
+$connect = new PDO("mysql:host=localhost;dbname=c12;charset=utf8", "root", "");
 $email = $password = "";
 $email_err = $password_err = "";
 
@@ -25,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Prepare a select statement
         $sql = "SELECT id, email, password FROM users WHERE email = :email";
 
-        if ($stmt = $pdo->prepare($sql)) {
+        if ($stmt = $connect->prepare($sql)) {
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
 
@@ -70,6 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Close connection
-    unset($pdo);
+    unset($connect);
 }
 ?>

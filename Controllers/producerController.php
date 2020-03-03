@@ -14,7 +14,7 @@ class ProducerController
 
     public function __construct()
     {
-        $connection = new loginConnection("mysql:host=localhost;dbname=c12;charset=utf8", "root", "");
+        $connection = new loginConnection();
         $this->proDB = new producerDB($connection->connect());
     }
 

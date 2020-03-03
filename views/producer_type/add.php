@@ -1,6 +1,9 @@
 <?php
-include '../../connect.php';
-?>
+use Model\LoginConnection; ?>
+<?php
+    $connect = new LoginConnection();
+    $connect = $connect->connect();
+    ?>
 <div class="container center" >
     <div class="col-8 col-md-8">
         <div class="row">
@@ -15,7 +18,7 @@ include '../../connect.php';
                     <select class="form-control" name="id_producer">
                         <?php
                         $sql = "SELECT * FROM producer";
-                        $result = $pdo->query($sql);
+                        $result = $connect->query($sql);
                         foreach ($result as $row) {
                             echo "<option value=" . $row['id'] . ">" . $row['id'] . " - " . $row['name_producer'] . "</option>";
                         }
@@ -27,7 +30,7 @@ include '../../connect.php';
                     <select class="form-control" name="id_type">
                         <?php
                         $sql = "SELECT * FROM type_product";
-                        $result = $pdo->query($sql);
+                        $result = $connect->query($sql);
                         foreach ($result as $row) {
                             echo "<option value=" . $row['id'] . ">" . $row['id'] . " - " . $row['name_type'] . "</option>";
                         }

@@ -1,6 +1,5 @@
-<?php
-include '../../connect.php';
-?>
+<?php require_once('model/loginConnection.php');?>
+
 <!DOCTYPE html>
 <html lang="en">
 <div class="container center">
@@ -23,7 +22,7 @@ include '../../connect.php';
                         <select class="form-control" name="type">
                             <?php
                         $sql = "SELECT * FROM type_product";
-                        $result = $pdo->query($sql);
+                        $result = $connect->query($sql);
                         foreach ($result as $row) {
                             if($row['id'] === $pro->type_product )
                             {
@@ -41,7 +40,7 @@ include '../../connect.php';
                         <select class="form-control" name="producer">
                             <?php
                 $sql = "SELECT * FROM producer";
-                $result = $pdo->query($sql);
+                $result = $connect->query($sql);
                 foreach ($result as $row) {
                     if($row['id'] === $pro->producer){
                         echo "<option value=" . $row['id'] . " selected>" . $row['id'] . " - " . $row['name_producer'] . "</option>";

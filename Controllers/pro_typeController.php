@@ -14,7 +14,7 @@ class Pro_typeController
 
     public function __construct()
     {
-        $connection = new loginConnection("mysql:host=localhost;dbname=c12;charset=utf8", "root", "");
+        $connection = new loginConnection();
         $this->protypeDB = new ProtypeDB($connection->connect());
     }
 

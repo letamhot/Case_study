@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "../../model/config.php";
+require_once "../../model/loginConnection.php";
 
 // Define variables and initialize with empty values
 require_once "../../Controllers/register.php";

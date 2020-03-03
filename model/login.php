@@ -7,7 +7,6 @@ class Login
     public $Name;
     public $email;
     public $password;
-    // public $access;
 
 
     public function __construct($Name, $email, $password)
@@ -15,6 +14,5 @@ class Login
         $this->Name = $Name;
         $this->email = $email;
         $this->password = $password;
-        // $this->access = $access;
     }
 }

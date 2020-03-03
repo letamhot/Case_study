@@ -1,7 +1,6 @@
-<?php
-include '../../connect.php';
-?>
-<div class="container center" >
+<?php require_once('model/loginConnection.php');?>
+
+<div class="container center">
     <div class="col-8 col-md-8">
         <div class="row">
             <div class="col-8">
@@ -18,7 +17,7 @@ include '../../connect.php';
                         <select class="form-control" name="type">
                             <?php
                         $sql = "SELECT * FROM type_product";
-                        $result = $pdo->query($sql);
+                        $result = $connect->query($sql);
                         foreach ($result as $row) {
                             echo "<option value=" . $row['id'] . ">" . $row['id'] . " - " . $row['name_type'] . "</option>";
                         }
@@ -30,7 +29,7 @@ include '../../connect.php';
                         <select class="form-control" name="producer">
                             <?php
                         $sql = "SELECT * FROM producer";
-                        $result = $pdo->query($sql);
+                        $result = $connect->query($sql);
                         foreach ($result as $row) {
                             echo "<option value=" . $row['id'] . ">" . $row['id'] . " - " . $row['name_producer'] . "</option>";
                         }
@@ -68,4 +67,5 @@ if(isset($message)){
 }
 ?>
 </body>
+
 </html>

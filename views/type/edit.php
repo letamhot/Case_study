@@ -1,6 +1,5 @@
-<?php
-include '../../connect.php';
-?>
+<?php require_once('model/loginConnection.php');?>
+
 <!DOCTYPE html>
 <html lang="en">
 <div class="container center">

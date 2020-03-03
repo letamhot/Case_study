@@ -8,10 +8,13 @@ font: 14px sans-serif; text-align: center;
 table tr td {
 font-size: 1.2em;
 font-weight: bold;
+
 }
 table tr th {
   font-size: 1.2em;
   font-weight: bold;
+  background-color: turquoise;
+  text-align: center;
   }
 .page-header{
     background-color: #66FFFF;
@@ -140,17 +143,13 @@ table tr th {
   #footer {
     color: black;
     background-image: linear-gradient(rgb(255, 255, 255),rgb(85, 253, 253) ); 
-    border-top: 3px solid black;
-    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
-    text-align: center;
+  
   }
   div.thumbnail {
     margin: 5px;
-    /* border: 1px solid #ccc; */
-    float: center;
     width: 100%;
   }
 .thumbnail {
@@ -159,7 +158,6 @@ table tr th {
     margin-bottom: 20px;
     line-height: 1.42857143;
     background-color: #fff;
-    /* border: 1px solid #ddd; */
     border-radius: 4px;
 }
   
@@ -177,5 +175,6 @@ table tr th {
     text-align: center;
   }
   #container{
-    min-height: 1000px;
+    min-height: 2000px;
+    width: 100%;
   }

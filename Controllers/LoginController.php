@@ -14,7 +14,7 @@ class LoginController
 
     public function __construct()
     {
-        $connection = new loginConnection("mysql:host=localhost;dbname=c12;charset=utf8", "root", "");
+        $connection = new loginConnection();
         $this->loginDB = new LoginDB($connection->connect());
     }
 
@@ -26,7 +26,6 @@ class LoginController
             $Name = $_POST['Name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
-            // $access = $_POST['access'];
             $login = new Login($Name, $email, $password);
             $this->loginDB->create($login);
             $message = 'Login created';

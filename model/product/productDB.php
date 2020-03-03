@@ -86,7 +86,7 @@ class ProductDB
     }
     public function Showfile()
     {
-        $sql = "SELECT product.id,product.name, type_product.name_type as name_type, producer.name_producer AS producer, product.amount,product.image
+        $sql = "SELECT product.id,product.name, type_product.name_type as name_type, producer.name_producer AS producer, product.amount, product.image, product.price_input
         FROM product 
         JOIN producer ON producer.id = product.producer
         JOIN type_product ON type_product.id =product.type_product
@@ -97,7 +97,7 @@ class ProductDB
         $result = $statement->fetchAll();
         $pros = [];
         foreach ($result as $row) {
-            $pro = new Product($row['name'], $row['type_product'], $row['producer'], $row['amount'], $row['image'], $row['price_input']);
+            $pro = new Product($row['name'], $row['name_type'], $row['producer'], $row['amount'], $row['image'], $row['price_input']);
             $pro->id = $row['id'];
             $pros[] = $pro;
         }

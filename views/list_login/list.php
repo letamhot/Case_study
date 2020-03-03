@@ -19,7 +19,6 @@
                     <th>STT</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Password</th>
                     <th colspan="1" >Action</th>
                 </tr>
             </thead>
@@ -29,7 +28,6 @@
                     <td><?php echo ++$key ?></td>
                     <td><?php echo $login->Name ?></td>
                     <td><?php echo $login->email ?></td>
-                    <td><?php echo $login->password ?></td>
                     <td> <a href="index.php?page=delete&id=<?php echo $login->id; ?>"
                             class="btn btn-warning btn-sm">Delete</a></td>
                     </td>
